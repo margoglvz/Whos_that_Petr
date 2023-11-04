@@ -24,7 +24,7 @@ const quiz_bank = [
                 correct: false,
             },
         ],
-        image: "https://ih1.redbubble.net/image.3546877029.0615/st,small,507x507-pad,600x600,f8f8f8.jpg"
+        image: "https://static.vecteezy.com/system/resources/previews/024/997/217/non_2x/cute-animal-doll-with-transparent-background-generate-ai-free-png.png"
     }, 
     {
         question: "Bob Ross Petr?",
@@ -46,7 +46,7 @@ const quiz_bank = [
                 correct: true,
             },
         ],
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQUmMj8WqDBrqra-IovGTsDES6mOf8ehhuQ&usqp=CAU"
+        image: "https://subtleasiantreats.com/cdn/shop/products/H50b66cb7cf424e928d80db9bc4d0d0611__2_-removebg-preview_500x.png?v=1654587892"
     },
     {
         question: "Ursula Petr?",
@@ -68,14 +68,14 @@ const quiz_bank = [
                 correct: false,
             },
         ],
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc-_iTDXCF9kQtL4PTabmtp_M8-QDom0x_rw&usqp=CAU"
+        image: "https://i.pinimg.com/originals/8a/5f/58/8a5f58fef2a331b5ee853dcdb313190d.png"
     }
 ]
 
 function newQuestion() {
     document.getElementById('quiz').innerHTML = ""; 
     const current = quiz_bank[Math.floor(Math.random() * 3)];
-
+document.getElementById("image").style.filter = "brightness(0%)"; 
 document.getElementById("image").innerHTML = `
 <image src="${current.image}"></image>
 `; 
@@ -119,12 +119,17 @@ function clearQuestion() {
 
 function selected(correct){
     console.log("user seleced correct value",correct)
+    //set interval 
     if(correct) {
         playerScore+=1;
     } 
-
-    updateScore();
-    newQuestion(); 
+    document.getElementById("image").style.filter = "brightness(100%)"; 
+    setTimeout(
+        function() {
+            updateScore();
+            newQuestion(); 
+        }, 250); 
+   
 }
 
 function endScene() {
