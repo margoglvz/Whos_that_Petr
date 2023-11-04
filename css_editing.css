@@ -2,6 +2,7 @@
     --text-color: rgb(0,100,164)
 }
 
+
 html, body {
     font-family: 'Anton', sans-serif;
     margin: 0;
@@ -10,6 +11,13 @@ html, body {
     max-width: 1000px;
     margin: 0 auto;
     background-color: var(--text-color);
+    background: linear-gradient(
+    to top,
+    #64BCF4 50%,
+    #64BCF4 50%,
+    var(--text-color) 70%,
+    var(--text-color) 100%
+  );
 }
 
 h1 {
@@ -30,11 +38,20 @@ button:hover{
 }
 
 button{
+    display: block;
     border-color: #060166;
     border-radius: 20px;
     border-width: 4px;
+    text-align:center;
+    margin: 0 auto;
+    width: 15%;
+    font-size: 30px;
 }
 
 img{
-    
+    border-radius: 20px;
+    size-adjust: medium;
+    border: 1px solid #ddd;
+    width: 500px;
+    box-shadow: 0 0 2px 1px rgba(4, 28, 35, 0.5);
 }
