@@ -83,7 +83,6 @@ document.getElementById("image").innerHTML = `
 document.getElementById('quiz').innerHTML += `
 
 <div>
-    ${current.question}
     <div>
      <button onclick="selected(${current.answers[0].correct})">${current.answers[0].text}</button>
      <button onclick="selected(${current.answers[1].correct})">${current.answers[1].text}</button>
