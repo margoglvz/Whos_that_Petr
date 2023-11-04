@@ -1,0 +1,29 @@
+* {
+
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.image {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+
+}
+.buttons {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+}
+.wrong {
+    background-color: red;
+}
+.correct {
+    background-color: green;
+}
