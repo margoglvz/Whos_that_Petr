@@ -3,7 +3,7 @@
 }
 
 
-html, body {
+ html, body {
     font-family: 'Anton', sans-serif;
     margin: 0;
     padding-bottom: 20vh;
@@ -13,17 +13,17 @@ html, body {
     background-color: var(--text-color);
     background: linear-gradient(
     to top,
-    #64BCF4 50%,
-    #64BCF4 50%,
+    #31AFFF 0%,
+    #31AFFF 55%,
     var(--text-color) 70%,
-    var(--text-color) 100%
-  );
-}
+    var(--text-color) 100%);
+  
+} 
 
 h1 {
     font-size: 90px;
     text-align:center;
-    margin: 30vh 0 0 0;
+    margin: 10vh 0 0 0;
 }
 
 p{
@@ -52,6 +52,7 @@ img{
     border-radius: 20px;
     size-adjust: medium;
     border: 1px solid #ddd;
-    width: 500px;
+    width: 350px;
     box-shadow: 0 0 2px 1px rgba(4, 28, 35, 0.5);
+
 }
