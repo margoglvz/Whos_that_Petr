@@ -3,6 +3,9 @@
 let playerScore = 0;
 let finalScore = 0; 
 let timeLeft = 10;
+let users = [
+
+]; 
 const quiz_bank = [
     {
         question: "Shrek Petr?",
@@ -107,7 +110,6 @@ function loaded(){
 
         if(timeLeft <= 0) {
             clearInterval(timer); 
-            finalScore = playerScore; 
             endScene(); 
         }
     }, 1000);
@@ -123,16 +125,17 @@ function selected(correct){
     if(correct) {
         playerScore+=1;
     } 
-    document.getElementById("image").style.filter = "brightness(100%)"; 
+    document.getElementById("image").style.filter = "blur(10px)"; 
     setTimeout(
         function() {
             updateScore();
             newQuestion(); 
-        }, 250); 
+        }, 500); 
    
 }
 
 function endScene() {
+    users.append(localStorage.getItem("username"))
     localStorage.setItem("score", playerScore); 
     window.location = 'wtp_end_scene.html';
 }
@@ -162,3 +165,5 @@ function endLoad() {
 //backticks ` are template strings
 
 // add event listener 
+
+localStorage.setItem("usernames", users); 
