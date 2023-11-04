@@ -1,7 +1,8 @@
 // this will make buttons correspond to new answer 
 //8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
-let timeLeft = 60;
+let finalScore = 0; 
+let timeLeft = 20;
 const quiz_bank = [
     {
         question: "Shrek Petr?",
@@ -83,7 +84,6 @@ document.getElementById("image").innerHTML = `
 document.getElementById('quiz').innerHTML += `
 
 <div>
-    ${current.question}
     <div>
      <button onclick="selected(${current.answers[0].correct})">${current.answers[0].text}</button>
      <button onclick="selected(${current.answers[1].correct})">${current.answers[1].text}</button>
@@ -106,7 +106,9 @@ function loaded(){
         document.getElementById("timer").innerText = `Time: ${timeLeft}  `;
 
         if(timeLeft <= 0) {
-            clearInterval(timer)
+            clearInterval(timer); 
+            finalScore = playerScore; 
+            endScene(); 
         }
     }, 1000);
 }
@@ -125,6 +127,10 @@ function selected(correct){
     newQuestion(); 
 }
 
+function endScene() {
+    window.location = 'wtp_end_scene.html';
+}
+
 // buttons.forEach(button => button.addEventListener("click", value)) {
 //     checkCorrect(value); 
 // }
@@ -140,6 +146,10 @@ function selected(correct){
 
 function updateScore() {
     document.getElementById("counter").innerText = `Score: ${playerScore}`;
+}
+
+function endLoad() {
+    document.getElementById("finalScore").innerHTML= `You found ${playerScore} Petrs!`; 
 }
 
 //backticks ` are template strings
