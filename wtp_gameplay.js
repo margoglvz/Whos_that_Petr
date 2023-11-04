@@ -105,7 +105,8 @@ function loaded(){
         document.getElementById("timer").innerText = `Time: ${timeLeft}  `;
 
         if(timeLeft <= 0) {
-            clearInterval(timer)
+            clearInterval(timer); 
+            endScene(); 
         }
     }, 1000);
 }
@@ -124,6 +125,10 @@ function selected(correct){
     newQuestion(); 
 }
 
+function endScene() {
+    window.location = 'wtp_end_scene.html';
+}
+
 // buttons.forEach(button => button.addEventListener("click", value)) {
 //     checkCorrect(value); 
 // }
@@ -139,6 +144,10 @@ function selected(correct){
 
 function updateScore() {
     document.getElementById("counter").innerText = `Score: ${playerScore}`;
+}
+
+function endLoad() {
+    document.getElementById("finalScore").innerHTML= `You found ${playerScore} Petrs!`; 
 }
 
 //backticks ` are template strings
