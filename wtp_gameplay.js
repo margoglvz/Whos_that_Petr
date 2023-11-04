@@ -3,9 +3,7 @@
 let playerScore = 0;
 let finalScore = 0; 
 let timeLeft = 10;
-let users = [
-
-]; 
+let users = ["Brian", "Candance"]; 
 const quiz_bank = [
     {
         question: "Shrek Petr?",
@@ -121,11 +119,10 @@ function clearQuestion() {
 
 function selected(correct){
     console.log("user seleced correct value",correct)
-    //set interval 
     if(correct) {
         playerScore+=1;
     } 
-    document.getElementById("image").style.filter = "blur(10px)"; 
+    document.getElementById("image").style.filter = "blur(0px)"; 
     setTimeout(
         function() {
             updateScore();
@@ -135,23 +132,10 @@ function selected(correct){
 }
 
 function endScene() {
-    users.append(localStorage.getItem("username"))
+    users.push(localStorage.getItem("user")); 
     localStorage.setItem("score", playerScore); 
     window.location = 'wtp_end_scene.html';
 }
-
-// buttons.forEach(button => button.addEventListener("click", value)) {
-//     checkCorrect(value); 
-// }
-
-// function checkCorrect() {
-//     if (myElement.classList.contains("correct")) {
-
-//     }
-//         playerScore += 1; 
-//         updateScore(); 
-    
-// }
 
 function updateScore() {
     document.getElementById("counter").innerText = `Score: ${playerScore}`;
@@ -162,8 +146,6 @@ function endLoad() {
 }
 
 
-//backticks ` are template strings
-
-// add event listener 
-
 localStorage.setItem("usernames", users); 
+
+console.log(users); 

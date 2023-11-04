@@ -1,20 +1,16 @@
-//leadre
 
-function newQuestion() {
-    document.getElementById('quiz').innerHTML = ""; 
-    const current = quiz_bank[Math.floor(Math.random() * 3)];
-document.getElementById("image").style.filter = "brightness(0%)"; 
-document.getElementById("image").innerHTML = `
-<image src="${current.image}"></image>
-`; 
+let list = localStorage.getItem("usernames"); 
 
+console.log(list); 
 
-document.getElementById('board').innerHTML += `
+function addUser() {
+    document.getElementById('board').innerHTML += `
 
 <div>
-    <div class="name">Player</div>
-    <div class="score">Score</div>
+    <div class="name">${list[list.length - 1]}</div>
 </div>
 `;
 
 }
+
+// ${list[-1]}
