@@ -2,7 +2,7 @@
 //8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
 let finalScore = 0; 
-let timeLeft = 20;
+let timeLeft = 10;
 const quiz_bank = [
     {
         question: "Shrek Petr?",
@@ -128,6 +128,7 @@ function selected(correct){
 }
 
 function endScene() {
+    localStorage.setItem("score", playerScore); 
     window.location = 'wtp_end_scene.html';
 }
 
@@ -149,8 +150,9 @@ function updateScore() {
 }
 
 function endLoad() {
-    document.getElementById("finalScore").innerHTML= `You found ${playerScore} Petrs!`; 
+    document.getElementById("finalScore").innerText = `You found ${localStorage.getItem("score")} Petrs!`;
 }
+
 
 //backticks ` are template strings
 
