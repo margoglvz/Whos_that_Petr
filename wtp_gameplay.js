@@ -1,7 +1,8 @@
 // this will make buttons correspond to new answer 
 //8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
-let timeLeft = 60;
+let finalScore = 0; 
+let timeLeft = 20;
 const quiz_bank = [
     {
         question: "Shrek Petr?",
@@ -106,6 +107,7 @@ function loaded(){
 
         if(timeLeft <= 0) {
             clearInterval(timer); 
+            finalScore = playerScore; 
             endScene(); 
         }
     }, 1000);
