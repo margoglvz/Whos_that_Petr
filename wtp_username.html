@@ -7,10 +7,13 @@
     <script src="./wtp_gameplay.js"></script>
 </head>
 <body>
-    <input type="text" id="name" minlength="3" maxLength ="9" size="12"></input>
+    <form action="wtp_gameplay.html" method="post">
+        <input type="text" id="name" minlength="3" maxLength ="9" size="12"></input>
     <script>
         let username = document.getElementById("name"); 
         localStorage.setItem("user", username); 
     </script>
+    </form>
+    
 </body>
 </html>
