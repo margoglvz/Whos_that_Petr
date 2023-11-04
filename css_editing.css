@@ -1,12 +1,40 @@
+:root{
+    --text-color: rgb(0,100,164)
+}
+
 html, body {
     font-family: 'Anton', sans-serif;
     margin: 0;
     padding-bottom: 20vh;
     text-align: center;
     max-width: 1000px;
-    color:blueviolet;
+    margin: 0 auto;
+    background-color: var(--text-color);
 }
 
 h1 {
+    font-size: 90px;
     text-align:center;
+    margin: 30vh 0 0 0;
+}
+
+p{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 25px;
+}
+
+button:hover{
+    border-color: #ABF1FF;
+    border-width: 4px;
+    border-radius: 20px;
+}
+
+button{
+    border-color: #060166;
+    border-radius: 20px;
+    border-width: 4px;
+}
+
+img{
+    
 }
