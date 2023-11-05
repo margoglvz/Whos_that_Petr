@@ -2,7 +2,7 @@
 //8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
 let finalScore = 0; 
-let timeLeft = 10;
+let timeLeft = 30;
 let scores = [4, 2]; 
 localStorage.setItem("scores", JSON.stringify(scores)); 
 
@@ -207,7 +207,7 @@ random_variables.push(newRandom);
 random_variables.push(newRandom2);
 random_variables.push(newRandom3);
 random_variables.push(newRandom4);
-
+document.getElementById("image").style.filter = "blur(10Px)";
 var current = random_variables[Math.floor(Math.random() * 3)]; 
 document.getElementById("image").innerHTML = `
 <image src="imgs/${current.image}"></image>
@@ -221,6 +221,7 @@ document.getElementById('quiz').innerHTML += `
      <button onclick="selected(${newRandom2 == current})">${newRandom2.name}</button>
      <button onclick="selected(${newRandom3 == current})">${newRandom3.name}</button>
      <button onclick="selected(${newRandom4 == current})">${newRandom4.name}</button>
+     <button onclick="document.getElementById("image").style.filter = "blur(0Px)"
 
     </div>
 </div>
