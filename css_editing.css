@@ -12,7 +12,7 @@ html {
     var(--text-color) 100%);
 }
  html, body {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Anton';
     margin: 0;
     padding-bottom: 20vh;
     text-align: center;
@@ -23,6 +23,7 @@ html {
 
 
 h1 {
+    font-family:'Anton';
     font-size: 90px;
     text-align:center;
     margin: 5vh 0 0 0;
@@ -32,8 +33,11 @@ h1 {
 
 p{
     font-family: 'Playpen Sans ExtraLight 200';
-    font-size: 25px;
-    font-style: italic;
+    font-size: 25px;;
+}
+
+h6{
+    font-family: 'Anton';
 }
 
 button:hover{
@@ -74,6 +78,8 @@ button{
     border: 1px solid #ddd;
     width: 350px;
     box-shadow: 0 0 2px 1px rgba(4, 28, 35, 0.5);
+    border-color: #ffd200;
+    border-width: 5px;
 }
 
 .trophy{
@@ -91,11 +97,6 @@ button{
     border-width: 4px;
     background-color: #ffe678;
 }
-
-p1{
-    text-align:right;
-}
-
 
 .combobutton{
     display: flex;
