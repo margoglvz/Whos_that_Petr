@@ -1,6 +1,17 @@
-* {
-
+:root{
+    --text-color: rgb(80,164,261)
 }
+
+html{
+    background-color: var(--text-color);
+}
+
+
+
+h1{
+    font-family: 'Anton';
+}
+
 
 
 .header {
