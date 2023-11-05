@@ -25,3 +25,16 @@ h1 {
 html {
     background-color: #0064a4; 
 }
+
+h3 {
+    color: white;
+    display: flex;
+    justify-content: center; 
+}
+
+p {
+    color: white;
+    display: flex;
+    justify-content: center; 
+
+}
