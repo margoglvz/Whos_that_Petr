@@ -1,5 +1,5 @@
 let username = "marly";
-let users = ["Brian", "Candance"]; 
+let users = []; 
 localStorage.setItem("users", JSON.stringify(users)); 
 
 function makeBoard() {
