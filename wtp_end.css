@@ -1,14 +1,18 @@
 h1, h2 {
     display: flex;
     justify-content: center; 
+    margin: 0 auto; 
 }
 
 #yay {
     display: flex;
     justify-content: center; 
+    margin: 0 auto; 
+    
 }
 
-#leaderboard {
+#play_again {
     display: flex;
     justify-content: center; 
+    margin: 0 auto; 
 }
