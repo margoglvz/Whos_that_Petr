@@ -2,7 +2,7 @@
 //8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
 let finalScore = 0; 
-let timeLeft = 10;
+let timeLeft = 30;
 let scores = []; 
 localStorage.setItem("scores", JSON.stringify(scores)); 
 
