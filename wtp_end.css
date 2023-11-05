@@ -1,14 +1,27 @@
 h1, h2 {
     display: flex;
     justify-content: center; 
+    margin: 0 auto; 
+}
+
+h1 {
+    color: white; 
 }
 
 #yay {
     display: flex;
     justify-content: center; 
+    margin: 0 auto; 
+    width: 30em; 
+    
 }
 
-#leaderboard {
+#play_again {
     display: flex;
     justify-content: center; 
+    margin: 0 auto; 
+}
+
+html {
+    background-color: #0064a4; 
 }
