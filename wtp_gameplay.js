@@ -167,6 +167,7 @@ const quiz_bank = [
     }
 ]
 
+// Shuffles quiz_bank so that the first four indexes are randomized and can be used as the buttons
 // shuffle function from https://stackoverflow.com/a/2450976
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
