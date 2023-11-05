@@ -3,6 +3,8 @@
 let playerScore = 0;
 let finalScore = 0; 
 let timeLeft = 10;
+let scores = [4, 2]; 
+localStorage.setItem("scores", JSON.stringify(scores)); 
 
 
 const quiz_bank = [
