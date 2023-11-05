@@ -1,11 +1,9 @@
-// this will make buttons correspond to new answer 
+// Sets default scores and start time
 let playerScore = 0;
 let finalScore = 0; 
 let timeLeft = 30;
-let scores = []; 
-localStorage.setItem("scores", JSON.stringify(scores)); 
 
-
+// Array of Petr names and their images
 const quiz_bank = [
     {
         image: "0.jpg",
@@ -192,11 +190,12 @@ function shuffle(array) {
 function newQuestion() {
 // Resets page
     document.getElementById('quiz').innerHTML = ""; 
-    
+
+// Shuffles quiz_bank so that the first four indexes are randomized and can be used as the buttons
 // Is a shuffled array of the quiz_bank, changed everytime
 var shuffledArray = shuffle(quiz_bank);
 
-// // Array with 4 random values between 0-40
+// Array with 4 random values between 0-40
 let random_variables = [];
 
 var newRandom = shuffledArray[0]; 
@@ -208,12 +207,18 @@ random_variables.push(newRandom);
 random_variables.push(newRandom2);
 random_variables.push(newRandom3);
 random_variables.push(newRandom4);
+
+// Initially blurs the image
 document.getElementById("image").style.filter = "blur(10Px)";
+
+// Sets the current, correct answer to one of the four buttons
 var current = random_variables[Math.floor(Math.random() * 3)]; 
+
 document.getElementById("image").innerHTML = `
 <image src="imgs/${current.image}"></image>
 `; 
 
+// Checks if the button clicked is the correct answer
 document.getElementById('quiz').innerHTML += `
 
 <div>
@@ -229,7 +234,7 @@ document.getElementById('quiz').innerHTML += `
 
 }
 
-
+// Loads a new screen 
 function loaded(){
 
     newQuestion(); 
@@ -245,10 +250,7 @@ function loaded(){
     }, 1000);
 }
 
-function clearQuestion() {
-    document.getElementById("${questionNumber}").innerHTML += ""; 
-}
-
+// Checks if the correct answer is chosen and updates the score by 1
 function selected(correct){
 
     console.log("user seleced correct value",correct)
@@ -264,15 +266,18 @@ function selected(correct){
    
 }
 
+// Loads the end screen
 function endScene() {
     localStorage.setItem("score", playerScore); 
     window.location = 'wtp_end_scene.html';
 }
 
+// Updates the html of the score to match
 function updateScore() {
     document.getElementById("counter").innerText = `Score: ${playerScore}`;
 }
 
+// Displays the number of Petrs guessed at the end screen
 function endLoad() {
     document.getElementById("finalScore").innerText = `You found ${localStorage.getItem("score")} Petrs!`;
 }
