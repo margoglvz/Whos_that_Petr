@@ -222,7 +222,6 @@ document.getElementById('quiz').innerHTML += `
      <button onclick="selected(${newRandom2 == current})">${newRandom2.name}</button>
      <button onclick="selected(${newRandom3 == current})">${newRandom3.name}</button>
      <button onclick="selected(${newRandom4 == current})">${newRandom4.name}</button>
-     <button onclick="document.getElementById("image").style.filter = "blur(0Px)"
 
     </div>
 </div>
