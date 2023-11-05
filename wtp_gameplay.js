@@ -1,5 +1,4 @@
 // this will make buttons correspond to new answer 
-//8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
 let finalScore = 0; 
 let timeLeft = 30;
@@ -169,6 +168,7 @@ const quiz_bank = [
         name: "Violent Duck Petr"
     }
 ]
+
 // Shuffles quiz_bank so that the first four indexes are randomized and can be used as the buttons
 // shuffle function from https://stackoverflow.com/a/2450976
 function shuffle(array) {
