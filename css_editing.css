@@ -21,24 +21,19 @@ html {
    
 } 
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
 
 h1 {
     font-size: 90px;
     text-align:center;
-    margin: 10vh 0 0 0;
-    word-spacing: 20px
+    margin: 5vh 0 0 0;
+    word-spacing: 20px;
+    text-shadow: 2px 2px #ffd200;
 }
 
 p{
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Playpen Sans ExtraLight 200';
     font-size: 25px;
+    font-style: italic;
 }
 
 button:hover{
@@ -58,7 +53,22 @@ button{
     font-size: 30px;
 }
 
-img{
+
+.button2:hover {
+    background-color: #ffe678;
+    border-radius:0px;
+}
+.button2 {
+    background-color: #ffd200;
+    display: block;
+    width: 60px;
+    height:65px;
+    text-align:left;
+    border-radius:0px;
+}
+
+
+#grad {
     border-radius: 20px;
     size-adjust: medium;
     border: 1px solid #ddd;
@@ -67,6 +77,29 @@ img{
 }
 
 .trophy{
-    size: 400%;
-    color: #f3ff10;
+    font-size: 60px;
+    text-align: left;
+    background-color: #ffd200;
+    width:55px;
+    height:65px;
+    border: 4px;
+    border-width: 10px;
+    border-color:#060166;
 }
+
+.trophy:hover{
+    border-width: 4px;
+    background-color: #ffe678;
+}
+
+p1{
+    text-align:right;
+}
+
+
+.combobutton{
+    display: flex;
+    align-items:left;
+}
+
+
