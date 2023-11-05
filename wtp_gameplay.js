@@ -3,7 +3,8 @@
 let playerScore = 0;
 let finalScore = 0; 
 let timeLeft = 10;
-let users = ["Brian", "Candance"]; 
+
+
 const quiz_bank = [
     {
         question: "Shrek Petr?",
@@ -132,7 +133,6 @@ function selected(correct){
 }
 
 function endScene() {
-    users.push(localStorage.getItem("user")); 
     localStorage.setItem("score", playerScore); 
     window.location = 'wtp_end_scene.html';
 }
@@ -145,7 +145,3 @@ function endLoad() {
     document.getElementById("finalScore").innerText = `You found ${localStorage.getItem("score")} Petrs!`;
 }
 
-
-localStorage.setItem("usernames", users); 
-
-console.log(users); 
