@@ -3,10 +3,10 @@
 let playerScore = 0;
 let finalScore = 0; 
 let timeLeft = 10;
-let users = [
+let scores = [4, 2]; 
+localStorage.setItem("scores", JSON.stringify(scores)); 
 
-]; 
-// Array with answer choices and their associated images
+
 const quiz_bank = [
     {
         image: "0.jpg",
