@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<audio controls>
-    <source src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cyborg%20Ninja.mp3" type="audio/mpeg">
+<audio src="Cyborg Ninja.mp3" autoplay>
     Your browser does not support the audio element.
 </audio>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Who's That Petr?</title>
     <link rel="stylesheet" href="css_editing.css">
 </head>
@@ -15,16 +15,39 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div class="trophy">
-    <a href="#"><i class="fa fa-trophy"></i></a>
-</div>
+    <div class="combobutton">
+        <div class="trophy">
+            <a href="#"><i class="fa fa-trophy"></i></a>
+        </div>
+        
+        <div class ="audio">
+            <button style='font-size:24px' class="button2"><img id="mute" 
+            src="data:image/png;base64,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" 
+            alt="buttonpng" width=40px /><i class="fa fa-volume-mute"></i></button>
+        </div>
+    </div>
+
+
     <h1>Who's That Petr?</h1>
     <br />
     <p>Want to test your Petr knowledge? See how many Petrs you can guess!</p>
-    <button onclick="window.location.href = 'wtp_gameplay.html';">PLAY</button>
+    <button onclick="window.location.href = 'wtp_username.html';">PLAY</button>
     <br />
     <br />
-    <img src="https://preview.redd.it/dgkct8w73km71.png?width=960&crop=smart&auto=webp&s=6562f5a439189a0e9e5d0621f4917569581c01bc" alt="Grad Petr">
+    <img id="grad" src="https://preview.redd.it/dgkct8w73km71.png?width=960&crop=smart&auto=webp&s=6562f5a439189a0e9e5d0621f4917569581c01bc" alt="Grad Petr">
+    <br />
+    <br />
+
+
+    <p1>Created by: Alexa Duffy, Emma Huynh, Margaret Galvez, Haris Munir, and Bethany Chang</p1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h6>Credits: "Cyborg Ninja" Kevin MacLeod (incompetech.com)
+        Licensed under Creative Commons: By Attribution 4.0 License
+        http://creativecommons.org/licenses/by/4.0/</h6>
 
 </body>
 </html>

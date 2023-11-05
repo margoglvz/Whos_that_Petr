@@ -251,7 +251,6 @@ function clearQuestion() {
 function selected(correct){
 
     console.log("user seleced correct value",correct)
-    //set interval 
     if(correct) {
         playerScore+=1;
     } 
@@ -264,23 +263,9 @@ function selected(correct){
 }
 
 function endScene() {
-    users.append(localStorage.getItem("username"))
     localStorage.setItem("score", playerScore); 
     window.location = 'wtp_end_scene.html';
 }
-
-// buttons.forEach(button => button.addEventListener("click", value)) {
-//     checkCorrect(value); 
-// }
-
-// function checkCorrect() {
-//     if (myElement.classList.contains("correct")) {
-
-//     }
-//         playerScore += 1; 
-//         updateScore(); 
-    
-// }
 
 function updateScore() {
     document.getElementById("counter").innerText = `Score: ${playerScore}`;
@@ -290,9 +275,3 @@ function endLoad() {
     document.getElementById("finalScore").innerText = `You found ${localStorage.getItem("score")} Petrs!`;
 }
 
-
-//backticks ` are template strings
-
-// add event listener 
-
-localStorage.setItem("usernames", users); 
