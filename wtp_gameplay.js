@@ -255,6 +255,7 @@ function selected(correct){
     if(correct) {
         playerScore+=1;
     } 
+    document.getElementById("image").style.filter = "blur(0Px)";
     setTimeout(
         function() {
             updateScore();
