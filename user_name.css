@@ -1,0 +1,15 @@
+:root{
+    --text-color: rgb(0,100,164)
+}
+
+html{
+    background-color: var(--text-color);
+}
+
+html,body{
+    text-align:center;
+}
+
+h1{
+    font-family: 'Anton';
+}
