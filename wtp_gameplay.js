@@ -2,7 +2,9 @@
 //8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
 let finalScore = 0; 
-let timeLeft = 30;
+let timeLeft = 10;
+let scores = []; 
+localStorage.setItem("scores", JSON.stringify(scores)); 
 
 
 const quiz_bank = [
