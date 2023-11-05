@@ -8,10 +8,11 @@
 </head>
 <body>
     <form action="wtp_gameplay.html" method="post">
-        <input type="text" id="name" minlength="3" maxLength ="9" size="12"></input>
+        <nav>Enter username: <input type="text" id="name" minlength="3" maxLength ="9" size="12"></input></nav>
     <script>
-        let username = document.getElementById("name"); 
+        let username = document.getElementById("name").value; 
         localStorage.setItem("user", username); 
+        console.log(localStorage.getItem("user")); 
     </script>
     </form>
     
