@@ -1,16 +1,12 @@
-
-let list = localStorage.getItem("usernames"); 
-
-console.log(list); 
+users = JSON.parse(localStorage.getItem("users")); 
 
 function addUser() {
-    document.getElementById('board').innerHTML += `
-
-<div>
-    <div class="name">${list[list.length - 1]}</div>
-</div>
-`;
+    users.push(localStorage.getItem("user")); 
+for(let i = 0; i < users.length; i++){
+    document.getElementById('board').innerHTML += `<div>${users[i]}</div>`
+}
 
 }
 
-// ${list[-1]}
+
+

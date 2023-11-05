@@ -1,0 +1,14 @@
+Welcome to the Petr Scheduler!
+
+We ran out of time to integrate the Petr Scheduler into our main web application, but here is the sourve ode and functionality!
+
+Purpose:
+The Petr Scheduler is designed to take images uploaded by the user and extract the date and time of the Petr Drop!
+With the information, the Petr Scheduler enters it into the system which originally was a calendar but now is stored 
+on a local file of this git repository!
+
+Function:
+Petr scheduler utilizes parsing open source code alongside text extraction libraries which are also open sourced.
+The Scheduler then takes the parsed information and presents it in a way that is human friendly and readable.
+
+Please try out the demo and test the limits of the algorithms used to extract and recognize dates and times!
