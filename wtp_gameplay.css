@@ -25,11 +25,15 @@ h1{
     display: flex;
     flex-direction: row; 
     justify-content: center; 
+    size: 30px; 
 
 }
 #quiz {
+
     display: flex;
-    justify-content: center; 
+
+    justify-content: center;
+
 }
 .wrong {
     background-color: red;
