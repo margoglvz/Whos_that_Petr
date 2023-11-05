@@ -2,7 +2,7 @@
 //8 bit petr, pumpkin petr, thanos petr, lucky petr, romantic petr
 let playerScore = 0;
 let finalScore = 0; 
-let timeLeft = 30;
+let timeLeft = 10;
 let scores = []; 
 localStorage.setItem("scores", JSON.stringify(scores)); 
 
@@ -170,6 +170,7 @@ const quiz_bank = [
     }
 ]
 // Shuffles quiz_bank so that the first four indexes are randomized and can be used as the buttons
+// shuffle function from https://stackoverflow.com/a/2450976
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -207,7 +208,7 @@ random_variables.push(newRandom);
 random_variables.push(newRandom2);
 random_variables.push(newRandom3);
 random_variables.push(newRandom4);
-
+document.getElementById("image").style.filter = "blur(10Px)";
 var current = random_variables[Math.floor(Math.random() * 3)]; 
 document.getElementById("image").innerHTML = `
 <image src="imgs/${current.image}"></image>
@@ -221,6 +222,7 @@ document.getElementById('quiz').innerHTML += `
      <button onclick="selected(${newRandom2 == current})">${newRandom2.name}</button>
      <button onclick="selected(${newRandom3 == current})">${newRandom3.name}</button>
      <button onclick="selected(${newRandom4 == current})">${newRandom4.name}</button>
+     <button onclick="document.getElementById("image").style.filter = "blur(0Px)"
 
     </div>
 </div>
