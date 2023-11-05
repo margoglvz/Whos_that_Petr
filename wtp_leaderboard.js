@@ -4,12 +4,20 @@ scores = JSON.parse(localStorage.getItem("scores"));
 function addUser() {
     scores.push(localStorage.getItem("score")); 
     users.push(localStorage.getItem("user")); 
-for(let i = 0; i < users.length; i++){
+
+    console.log(users); 
+    console.log(scores); 
+    
     document.getElementById('board').innerHTML += `
-    <div>${users[i]}</div>
-    <div>${scores[i]}</div>
+    <div>
+
+        <h1>${users[users.length - 1]}</h1>
+        <h1>${scores[scores.length - 1]}</h1>
+
+        
+    </div>
     `;
-}
 
 }
+
 
