@@ -11,7 +11,7 @@ html {
     var(--text-color) 70%,
     var(--text-color) 100%);
 }
- html, body {
+html, body {
     font-family: 'Anton';
     margin: 0;
     padding-bottom: 20vh;
